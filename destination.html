@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Lesotho</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="destination.html">Destinations</a>
+		<a href="contact.html">Contact</a>
+		<button id="themeToggle" class="btn btn-dark">🌚</button>
+
+	</nav>
+	
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <input 
+                type="text"
+                id="destinationSearch"
+                class="form-control form-control-lg"
+                placeholder="Search for a destination..."
+            >
+
+        </div>
+    </div>
+
+
+	<div class="container">
+		<div class="row">
+	<div class="col-12 col-md-6">
+	<div class="destination destination-card">
+	<h2>Sehlabathebe National Park</h2>
+	<p>Lesotho's oldest nature reserve, located in the Qacha's Nek District in the southeastern Maloti Mountains.
+	the name translates to "plateau of the shield" in Sesotho describing the unique rolling grasslands and dramatic rock shields.</p>
+	<p>Experience the raw beauty of Sehlabathebe without worrying about where to sleep! Comfortable lodging self-catering options and campsites are ready for travelers looking to disconnect.Whether you want to fish the Tsoelikana River or hike under the flight of the bearded vulture, stay close to nature in the heart of Lesotho</p>
+	<img src="sehlabathebelodge.jpg" alt="sehlabathebelodge" width="500px">
+
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="destination destination-card">
+
+<h3>Maletsunyane Falls</h3>
+	<p>Maletsunyane falls is a famous waterfall near Semonkong in Lesotho.
+	It is known for its impressive height and beautiful natural surroundings.</p>
+	<p>Looking for a base for your next Lesotho adventure? Rooms and chalets are ready for bookings at Maletsunyane Lodge.</p>
+	<img src="maletsunyanelodge.jpg" alt="Maletsunyanelodge " width="500px">
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="destination destination-card">
+
+	<h4>Katse Dam</h4>
+
+	<p>Katse Dam is a concrete double-curvature arch dam on 
+	the Malibamatso River in the Maluti Mountains of Lesotho.It is a centerpiece of the Lesotho Highlands Water Project,
+     which diverts water to South Africa's industrial Gauteng province. </p>
+     <p>Looking for a breathtaking mountain getaway? Accommodation is open and ready for visitors at Katse Lodge.</p>
+     <img src="katsel.jpg" alt="Katse Lodge" width="500px">
+</div>
+</div>
+<div class="col-md-6">
+	<div class="destination">
+	<img src="katsev.webp">
+</div>
+</div>
+</div>
+</div>
+<footer>&copy;2026 Discover Lesotho. All rights reserved. Mathabo Ramangoane</footer>
+
+<script>
+
+const searchInput = document.getElementById("destinationSearch");
+
+searchInput.addEventListener("keyup", function() {
+
+    let searchValue = searchInput.value.toLowerCase();
+
+    let destinations = document.querySelectorAll(".destination-card");
+
+    destinations.forEach(function(destination) {
+
+        let destinationName = destination.textContent.toLowerCase();
+
+        if (destinationName.includes(searchValue)) {
+            destination.style.display = "";
+        } else {
+            destination.style.display = "none";
+        }
+
+    });
+
+});
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function() {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.innerHTML = "☀️";
+        themeToggle.classList.replace("btn-dark", "btn-light");
+    } else {
+        themeToggle.innerHTML = "🌙";
+        themeToggle.classList.replace("btn-light", "btn-dark");
+    }
+
+});
+
+	
+	
+</script>
+
+</body>
+</html> 

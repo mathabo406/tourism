@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Discover Lesotho</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body class="home-page">
+		<nav class="navbar navbar-expand-lg navbar-success">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            Discover Lesotho
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="destination.html">Destination</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+		
+		<button id="themeToggle" class="btn btn-dark">Dark Mode</button>
+	</nav>
+	<div class="container">
+	<h1>Welcome to Mountain Kingdom of Lesotho</h1>
+	<p>Get to know the beauty of the Kingdom in the Sky.</p>
+	<h2>Discover Something Beautiful!</h2>
+	<p>Get to visit amazing places and unforgetable experience to enjoy in Lesotho.</p>
+	<div class="v">
+	<a href="destination.html" class="lin btn-success">Explore Lesotho</a><br><br>
+	<a href="about.html">Learn More About Lesotho</a>
+</div>
+</div>
+
+
+<script>
+	
+	const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function() {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.innerHTML = "☀️";
+        themeToggle.classList.replace("btn-dark", "btn-light");
+    } else {
+        themeToggle.innerHTML = "🌙";
+        themeToggle.classList.replace("btn-light", "btn-dark");
+    }
+
+});
+</script>
+<footer>&copy;2026 Discover Lesotho. All rights reserved. Mathabo Ramangoane</footer>
+
+
+</body>
+</html>
